@@ -4,8 +4,6 @@ Personal unified agent configuration for Claude Code, Kimi, and other LLM harnes
 
 This repo is the portable, Mac-first home for Dale Rogers' reusable AI skills, squads, agents, hooks, templates, and harness integration configs. It is intended to be cloned as `~/.agent/` on the home Mac (and can also be used on Windows with minor path adjustments).
 
-> **Status:** Migrated from `C:\Users\DaleROGERS\.claude\` on the Windows work machine. DCCEEW-specific skills and project contexts were excluded.
-
 ---
 
 ## What's included
