@@ -3,6 +3,8 @@
 Cross-model, cross-harness configuration for AI agents, skills, squads, hooks, protocols, and memory.
 
 > **Status:** Evolved from `llm-toolkit`. `~/.agents/` is the live runtime directory. `~/30-PROJECTS/llm-toolkit/` is the Git-sync repo for cross-machine deployment.
+>
+> **Last synced:** 2026-06-13 — 101 skills, 6 squads, 8 integrations. All skills backfilled from `~/.claude/` archive via `~/30-PROJECTS/dotfiles/`.
 
 ---
 
