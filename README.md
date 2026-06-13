@@ -173,15 +173,6 @@ description: >-
 
 See [`templates/SQUAD.md`](templates/SQUAD.md).
 
-## Migration Status
-
-| Source | Destination | Status |
-|--------|-------------|--------|
-| `~/.claude/skills/*` | `~/.agent/skills/` | Migrated — curated, DCCEEW-specific skills removed |
-| `~/.claude/squads/*` | `~/.agent/squads/` | Migrated — workspace-cleanup squad |
-| `~/.claude/agents/*` | `~/.agent/agents/` | Empty placeholder |
-| Project `CLAUDE.md` | Project `AGENT.md` | Excluded from this repo; kept in individual project repos |
-
 ## Contributing
 
 - Add new skills to `skills/` with a `SKILL.md` and optional `scripts/` subfolder.
