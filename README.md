@@ -18,13 +18,6 @@ This repo is the portable, Mac-first home for Dale Rogers' reusable AI skills, s
 - **Hooks** in `hooks/` — session lifecycle scripts.
 - **Migration scripts** in `scripts/` — Windows PowerShell originals plus a Mac setup helper.
 
-## What's excluded
-
-- DCCEEW-specific skills (`dcceew-brand`, `dcceew-artefact`, `dcceew-costing`, `dcceew-placemat`, `dcceew-brand-guide`, `ict-cost-estimator`, `ict-report`, `regulatory-deep-research`, `vin-report`, `om-canvas-slides`, `sprint-plan`).
-- Deprecated creator skills (`architecture-diagram-creator`, `dashboard-creator`, `flowchart-creator`, `timeline-creator`, `technical-doc-creator`).
-- Project contexts and per-project `CLAUDE.md` files.
-- Secrets, credentials, session history, caches, telemetry, and other ephemeral Claude Code data.
-
 ---
 
 ## Mac setup
