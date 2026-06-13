@@ -1,0 +1,24 @@
+{
+  "$schema": "https://claude.ai/schemas/settings.json",
+  "skills": {
+    "searchPaths": [
+      "~/.agent/skills"
+    ]
+  },
+  "agents": {
+    "searchPaths": [
+      "~/.agent/agents",
+      "~/.agent/squads"
+    ]
+  },
+  "projectConfig": {
+    "requiredFiles": [
+      "AGENT.md"
+    ],
+    "optionalFiles": [
+      "TASKS.md",
+      "STANDARDS.md"
+    ],
+    "fallbackFromClaudeMd": true
+  }
+}

@@ -1,0 +1,50 @@
+# ~/.agent/config.yaml — Global Defaults
+
+# Preferred model harness when multiple are available
+# Valid: claude | kimi | openai | auto
+default_harness: claude
+
+# Model fallback chain (ordered)
+model_fallback:
+  - claude
+  - kimi
+  - openai
+
+# Paths (relative to home)
+paths:
+  skills: ~/.agent/skills
+  agents: ~/.agent/agents
+  squads: ~/.agent/squads
+  hooks: ~/.agent/hooks
+  templates: ~/.agent/templates
+
+# Default behavior flags
+defaults:
+  # Auto-run 5s audit on project open
+  auto_audit_on_open: false
+  # Auto-run inbox cleaner on session start
+  auto_inbox_clean: false
+  # Default project status for new projects
+  new_project_status: active
+  # Default project type for new projects
+  new_project_type: code
+
+# Harness-specific overrides
+harness_overrides:
+  claude:
+    # Claude Code specific settings
+    settings_file: ~/.claude/settings.json
+    skills_search_paths:
+      - ~/.agent/skills
+    agents_search_paths:
+      - ~/.agent/agents
+  kimi:
+    config_file: ~/.kimi/config.yaml
+    skills_search_paths:
+      - ~/.agent/skills
+  openai:
+    agents_file: ~/.agent/harness-integrations/openai/agents.yaml
+
+# Logging
+log_level: info
+log_file: ~/.agent/logs/agent.log

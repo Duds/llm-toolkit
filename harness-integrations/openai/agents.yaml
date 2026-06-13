@@ -1,0 +1,25 @@
+# OpenAI / GPT harness integration for ~/.agent
+# Maps OpenAI-compatible agent configs to the shared ~/.agent structure
+
+agents:
+  searchPaths:
+    - ~/.agent/agents
+  filePattern: AGENT.md
+
+skills:
+  searchPaths:
+    - ~/.agent/skills
+  filePattern: SKILL.md
+
+squads:
+  searchPaths:
+    - ~/.agent/squads
+  filePattern: SQUAD.md
+
+# Register agents here once they are added to ~/.agent/agents/
+# registered:
+#   - name: example
+#     display_name: Example Agent
+#     description: What this agent does
+#     agent_ref: ~/.agent/agents/example/AGENT.md
+#     default_prompt: Use Example Agent to ...

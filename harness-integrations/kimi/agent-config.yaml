@@ -1,0 +1,31 @@
+# Kimi harness integration for ~/.agent
+# Place or include this in ~/.kimi/config.yaml
+
+agent_system:
+  skills:
+    searchPaths:
+      - ~/.agent/skills
+    auto_load: false
+
+  agents:
+    searchPaths:
+      - ~/.agent/agents
+    auto_load: false
+
+  squads:
+    searchPaths:
+      - ~/.agent/squads
+    auto_load: false
+
+  project_detection:
+    config_file: AGENT.md
+    fallback_files:
+      - CLAUDE.md
+      - README.md
+
+  hooks:
+    searchPaths:
+      - ~/.agent/hooks
+    enabled:
+      - on-start
+      - on-project-open

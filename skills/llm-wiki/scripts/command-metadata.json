@@ -1,0 +1,30 @@
+{
+  "bootstrap": {
+    "description": "Scaffold a new llm-wiki with structure, templates, and scenario-tuned purpose.md and schema.md. Supports portfolio-level (~/Projects/_llm-wiki/) and project-level (<project>/_llm-wiki/) scopes. Use once per wiki — running it on an existing wiki is a no-op for existing files. Scenario flag preconfigures purpose.md for Research, Consulting, Design, or General use.",
+    "argumentHint": "[path] [--scenario research|consulting|design|general]"
+  },
+  "crawl": {
+    "description": "Discover candidate content in sibling folders or a named path, classify by 5P branch using folder path as a hint, and queue findings to atoms/_review/ for human triage. Idempotent — uses a SHA256 cache so unchanged files are skipped. Does not create atoms in branch folders directly; review queue prevents low-confidence claims from polluting the wiki.",
+    "argumentHint": "[path] [--scope project|portfolio]"
+  },
+  "ingest": {
+    "description": "Two-step chain-of-thought processing of a single source into atoms. Step 1: extract structured analysis (entities, concepts, contradictions, recommendations). Step 2: generate atom files from the analysis with confidence scores and cross-references. Splitting into two LLM calls produces materially better atoms than single-pass extraction.",
+    "argumentHint": "[source-path]"
+  },
+  "compile": {
+    "description": "Regenerate wiki pages from current atoms. Groups atoms by compile-to targets, sorts by confidence, surfaces contradictions, and writes wiki/<branch>/<page>.md with full provenance. Also refreshes index.md and overview.md. Refuses to overwrite hand-edited wiki files unless --force.",
+    "argumentHint": "[page] [--force] [--branch people|process|policy|platform|product]"
+  },
+  "query": {
+    "description": "Question-answering grounded in atoms and wiki pages. Returns a synthesized answer with [[atom-id]] citations and a numbered reference list. Optionally saves the answer to wiki/queries/YYYY-MM-DD-slug.md so it becomes first-class wiki content reusable in future queries.",
+    "argumentHint": "[question] [--save]"
+  },
+  "lint": {
+    "description": "Validate atoms, wikilinks, frontmatter, and cross-references. Checks: atom ID format, required fields, branch validity, source citations, broken wikilinks, orphan atoms, status consistency, supersession integrity. Returns a structured report; non-zero exit if critical errors exist.",
+    "argumentHint": ""
+  },
+  "report": {
+    "description": "Generate a health report for the wiki: atom count by branch, confidence distribution, stale atoms (status:current but unchanged 90+ days), contradictions awaiting review, broken links, knowledge gaps inferred from atom-page coverage. Writes a dated maintenance report to wiki/_meta/ for audit trail.",
+    "argumentHint": "[--save]"
+  }
+}

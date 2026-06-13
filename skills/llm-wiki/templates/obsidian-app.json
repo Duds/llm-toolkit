@@ -1,0 +1,13 @@
+{
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "showLineNumber": true,
+  "showFrontmatter": true,
+  "showInlineTitle": true,
+  "spellcheck": false,
+  "strictLineBreaks": false,
+  "useTab": false,
+  "tabSize": 2
+}
