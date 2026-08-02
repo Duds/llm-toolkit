@@ -8,9 +8,9 @@ Signal gateway: running on `127.0.0.1:8080`, connected to account `+614****4492`
 
 Hermes MCP servers configured: gmail-local (enabled), gcal-local (configured), azure (configured). Gmail MCP has 21 tools including triage, smart archive, newsletter cleanup, follow-up detection, financial tracking, interview tracking.
 
-User has three-tier task management system: Portfolio (~/TASKS.md), Project (project/TASKS.md), Wiki (llm-wiki/wiki/tasks/). Task ID scheme: `<PREFIX>-<NNN>` (P-001 for portfolio, RO-001 for Rock Oracle, IR5-001 for IR5 OS). Sync script at `~/30-PROJECTS/ir5-os/scripts/sync-tasks.py` syncs to GitHub Issues in Duds/ir5-os.
+User has three-tier task management system: Portfolio (~/TASKS.md), Project (project/TASKS.md), Wiki (llm-wiki/wiki/tasks/). Task ID scheme: `<PREFIX>-<NNN>` (P-001 for portfolio, RO-001 for Rock Oracle, IR5-001 for IR5 OS). Sync script at `~/ir5-os/scripts/sync-tasks.py` syncs to GitHub Issues in commonstanding/ir5os.
 
-User's llm-toolkit repo at `~/30-PROJECTS/llm-toolkit/` is the portable agent configuration for cross-harness use. Intended to deploy to `~/.agents/` as the single source of truth. Contains ~50 skills, 1 squad, hooks, templates, harness integrations.
+User's llm-toolkit repo at `~/10-COMMON-STANDING/tooling/llm-toolkit/` is the portable agent configuration for cross-harness use. Intended to deploy to `~/.agents/` as the single source of truth. Contains ~50 skills, 1 squad, hooks, templates, harness integrations.
 
 ir5-os project decides what the tooling layer should look like. llm-toolkit is the portable implementation. dotfiles/claude/ is the live Mac instance. Skill refactors from ir5-os/ROADMAP.md should land in llm-toolkit first, then flow to dotfiles/claude/.
 
