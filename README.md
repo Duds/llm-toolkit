@@ -2,9 +2,9 @@
 
 Cross-model, cross-harness configuration for AI agents, skills, squads, hooks, protocols, and memory.
 
-> **Status:** Evolved from `llm-toolkit`. `~/.agents/` is the live runtime directory. `~/30-PROJECTS/llm-toolkit/` is the Git-sync repo for cross-machine deployment.
+> **Status:** Evolved from `llm-toolkit`. `~/.agents/` is the live runtime directory. `~/10-COMMON-STANDING/tooling/llm-toolkit/` is the Git-sync repo for cross-machine deployment.
 >
-> **Last synced:** 2026-06-13 — 101 skills, 6 squads, 8 integrations. All skills backfilled from `~/.claude/` archive via `~/30-PROJECTS/dotfiles/`.
+> **Last synced:** 2026-09-05 — 109 skills. Synced from `~/10-COMMON-STANDING/tooling/llm-toolkit/`.
 
 ---
 
@@ -87,7 +87,7 @@ This wires `~/.agents/` to all installed harnesses (Hermes, Claude Code, Kimi).
 ~/.agents/scripts/sync.sh
 ```
 
-Pulls latest from `~/30-PROJECTS/llm-toolkit/` and updates `~/.agents/`.
+Pulls latest from `~/10-COMMON-STANDING/tooling/llm-toolkit/` and updates `~/.agents/`.
 
 ### 3. Check drift
 
@@ -103,26 +103,26 @@ Reports missing or drifted items compared to live harness instances.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ir5-os                                                     │
-│  (strategy, roadmap, decisions, health checks)              │
-└──────────────────────┬──────────────────────────────────────┘
-                       │ owns the "what" and "when"
-                       ▼
-┌─────────────────────────────────────────────────────────────┐
-│  ~/30-PROJECTS/llm-toolkit/  ←  GitHub source of truth      │
-│  (portable agent tooling — skills, agents, squads, hooks)   │
-└──────────────────────┬──────────────────────────────────────┘
-                       │ deploys to
-                       ▼
-┌─────────────────────────────────────────────────────────────┐
 │  ~/.agents/  ←  live runtime directory (this folder)        │
-│  (unified config for Hermes, Claude, Kimi, OpenClaw)       │
-└──────────────────────┬──────────────────────────────────────┘
-                       │ used by
-                       ▼
+│  (unified config for Hermes, Claude, Kimi, OpenClaw)        │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ owns the "how" (skills, hooks, runtime)
+                           ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  project-level AGENT.md files                               │
-│  (canopy, fillet, ir5-os, rock-oracle, etc.)                │
+│  ~/ir5-os/  ←  governance + memory (NOT a tooling member)   │
+│  (framework versions, ADRs, research, plans, decisions)     │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ owns the "what" and "why" (authority)
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  ~/_llm-wiki/  ←  knowledge store (own repo: Duds/llm-wiki) │
+│  (concepts, entities, projects, sources)                    │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ indexed by
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Workspace + project AGENT.md files                         │
+│  (00-Personal, 10-Common-Standing, ir5-os, products)        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -156,7 +156,7 @@ ln -s ~/.agents ~/.agent
 ## Notes
 
 - `~/.agents/` is the **runtime** directory. Edit here for immediate effect.
-- `~/30-PROJECTS/llm-toolkit/` is the **repo**. Commit there for cross-machine sync.
+- `~/10-COMMON-STANDING/tooling/llm-toolkit/` is the **repo**. Commit there for cross-machine sync.
 - Use `promote.sh` to move items from `~/.claude/` (live experiments) to `~/.agents/` (canonical).
 - Keep DCCEEW-specific or client-specific content in project-level configs, not in `~/.agents/`.
 
